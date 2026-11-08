@@ -1,0 +1,15 @@
+{
+  "name": "folia-jp-zh-live-lyrics",
+  "version": "1.0.0",
+  "description": "Folia 日文歌曲繁中翻譯與同步逐字字幕模組",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "devDependencies": {
+    "jsdom": "31.0.0",
+    "opencc-js": "1.4.2"
+  }
+}

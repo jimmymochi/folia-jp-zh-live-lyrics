@@ -1,0 +1,7 @@
+node_modules/
+dist/
+reference/
+test-results/
+*.zip
+.env*
+cache*.json

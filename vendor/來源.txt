@@ -1,0 +1,4 @@
+opencc-js 1.4.2
+https://github.com/nk2028/opencc-js
+來源：npm opencc-js@1.4.2 dist/esm/cn2t.js，原始內容未修改，僅改副檔名為 .mjs。
+授權：MIT AND Apache-2.0，參閱同目錄授權全文。

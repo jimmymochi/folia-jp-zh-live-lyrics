@@ -1,0 +1,3 @@
+* text=auto eol=lf
+vendor/opencc-cn2t.mjs -text
+*.zip binary
