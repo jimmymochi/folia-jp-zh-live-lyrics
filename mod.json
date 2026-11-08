@@ -2,10 +2,14 @@
   "folium": 1,
   "id": "jp-zh-live-lyrics",
   "name": "日文歌・繁中即時翻譯",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "jimmymochi",
   "description": "優先顯示現有中文；缺少譯文時，以 Google 免費網頁介面翻成繁中並快取。中文逐字亮起按原句時間估算，非語意逐字對齊。啟用自動翻譯後會把歌詞文字傳送至 Google，不傳送音訊或帳號憑證。",
   "client": "client.mjs",
-  "permissions": ["net.fetch", "filesystem.data", "visualizer.mode"],
+  "permissions": [
+    "net.fetch",
+    "filesystem.data",
+    "visualizer.mode"
+  ],
   "folia": ">=0.7.27 <0.8.0"
 }

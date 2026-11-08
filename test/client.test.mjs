@@ -38,3 +38,19 @@ test('export context registers rendering but does not start requests or change m
   await new Promise(r => setImmediate(r));
   assert.equal(h.getMode(), 'monet'); assert.equal(h.getNetwork(), 0); assert.equal(h.listeners.size, 0); dispose();
 });
+
+test('all registry labels follow Folium locale-map contract and render Chinese', () => {
+  const h = makeHost(); const dispose = activate(h.host);
+  for (const def of Object.values(h.definitions)) {
+    for (const item of [def, ...(def.settings ?? [])]) {
+      for (const key of ['label', 'description']) {
+        if (item[key] === undefined) continue;
+        assert.equal(typeof item[key], 'object', `${def.id}.${key} must be a locale map`);
+        for (const locale of ['zh-CN', 'zh-TW', 'en']) {
+          assert.match(item[key][locale], /\p{Script=Han}/u, `${def.id}.${key}.${locale}`);
+        }
+      }
+    }
+  }
+  dispose();
+});
